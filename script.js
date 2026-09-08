@@ -3,6 +3,21 @@ const nameInput = document.getElementById("name");
 const ageInput = document.getElementById("age");
 const greeting = document.getElementById("greeting");
 const ageMonths = document.getElementById("ageMonths");
+const quotesContainer = document.getElementById("quotes");
+
+const motivationalQuotes = [
+    "Success is the sum of small efforts, repeated day in and day out.",
+    "Believe you can and you're halfway there.",
+    "Dream big and dare to fail.",
+    "Your future depends on many things, but mostly on you.",
+    "Start where you are. Use what you have. Do what you can."
+];
+
+for (let i = 0; i < motivationalQuotes.length; i++) {
+    const quote = document.createElement("p");
+    quote.textContent = `"${motivationalQuotes[i]}"`;
+    quotesContainer.appendChild(quote);
+}
 
 const savedName = localStorage.getItem("name");
 const savedAge = localStorage.getItem("age");
